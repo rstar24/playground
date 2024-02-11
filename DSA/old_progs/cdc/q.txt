@@ -1,0 +1,28 @@
+•	Write the code to find the Fibonacci series upto the nth term. <DONE>
+•	Write code of Greatest Common Divisor <DONE>
+•	Write code of  Perfect number <DONE>
+•	Write code to Check if two strings are Anagram or not <DONE>
+•	Write code Check if the given string is Palindrome or not <DONE>
+•	Write code to Calculate frequency of characters in a string <DONE>
+•	Write code to check if two strings match where one string contains wildcard characters <DONE> <NOT CLEAR>
+•	Write a code for bubble sort <DONE>
+•	How is the merge sort algorithm implemented? <DONE>
+•	Write to code to check whether a given year is leap year or not. <DONE>
+•	Find non-repeating characters in a string <DONE>
+•	Write a code to replace a substring in a string. <DONE>
+•	Write a code for Heap sort. <DONE>
+•	Write a code to replace each element in an array by its rank in the array <DONE>
+•	Write a code to find circular rotation of an array by K positions. <DONE>
+•	Write a code to find non-repeating elements in an array. <DONE>
+•	Write a code to check for the longest palindrome in an array. <DONE>
+•	Write a code to find the factorial of a number. <DONE>
+•	Write the code to for Armstrong number <DONE>
+•	Write a program to find the sum of Natural Numbers using Recursion. <DONE>
+•	Write a program to add Two Matrices using Multi-dimensional Array. <DONE>
+•	Write code to check a String is palindrome or not? <DONE>
+•	Write a program for Binary to Decimal to conversion <DONE>
+•	Write a program to check whether a character is a vowel or consonant <DONE>
+•	Write a code to find an Automorphic number <DONE>
+•	Write a code to find Find the ASCII value of a character <DONE>
+•	Write a code to Remove all characters from string except alphabets <DONE>
+•	Write a code to find Fibonacci Series using Recursion <DONE>
