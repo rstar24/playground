@@ -28,6 +28,7 @@ template <class Ptype> class parser {
     Ptype find_var(char *s);
 
     public:
+        void putback();
         parser();
         Ptype eval_exp(char *exp);
 };
@@ -55,7 +56,7 @@ template <class Ptype>Ptype parser<Ptype>::eval_exp(char *exp){
 }
 
 // Process an assigment 
-template <class Ptype> void parser<Ptype>::eval_exp1(Ptype &reuslt){
+template <class Ptype> void parser<Ptype>::eval_exp1(Ptype &result){
     int slot;
     char ttok_type;
     char temp_token[80];
@@ -86,7 +87,7 @@ template <class Ptype> void parser<Ptype>::eval_exp1(Ptype &reuslt){
 }
 
 // Add or subract two terms
-template <class Ptype> void parser<Ptype>::eval_exp2(double &result){
+template <class Ptype> void parser<Ptype>::eval_exp2(Ptype &result){
     register char op;
     Ptype temp;
 
@@ -97,6 +98,7 @@ template <class Ptype> void parser<Ptype>::eval_exp2(double &result){
         switch(op){
             case '-':
                 result = result - temp;
+                break;
             case '+':
                 result = result + temp;
                 break;
@@ -105,7 +107,7 @@ template <class Ptype> void parser<Ptype>::eval_exp2(double &result){
 }
 
 // Multiply or divide two factors
-template <class Ptype>void parser<Ptype>::eval_exp3(double &result){
+template <class Ptype>void parser<Ptype>::eval_exp3(Ptype &result){
     register char op;
     Ptype temp;
 
@@ -128,7 +130,7 @@ template <class Ptype>void parser<Ptype>::eval_exp3(double &result){
 }
 
 // Process and exponent 
-template <class Ptype>void parser<Ptype>::eval_exp4(double &result){
+template <class Ptype>void parser<Ptype>::eval_exp4(Ptype &result){
     Ptype temp, ex;
     register int t;
 
@@ -146,7 +148,7 @@ template <class Ptype>void parser<Ptype>::eval_exp4(double &result){
 }
 
 // Evalute a unary + or -
-template <class Ptype>void parser<Ptype>::eval_exp5(double &result){
+template <class Ptype>void parser<Ptype>::eval_exp5(Ptype &result){
     register char op;
     op = 0 ;
     if((tok_type == DELIMITER) && *token == '+' || *token =='-' ){
@@ -158,7 +160,7 @@ template <class Ptype>void parser<Ptype>::eval_exp5(double &result){
 }
 
 // Process a parenthesized expression
-template <class Ptype>void parser<Ptype>::eval_exp6(double &result){
+template <class Ptype>void parser<Ptype>::eval_exp6(Ptype &result){
     if((*token == '(')){
         get_token();
         eval_exp2(result);
@@ -169,7 +171,7 @@ template <class Ptype>void parser<Ptype>::eval_exp6(double &result){
 }
 
 // Get the value of a number
-template <class Ptype>void parser::atom(double &result){
+template <class Ptype>void parser<Ptype>::atom(Ptype &result){
 
     switch(tok_type){
         case VARIABLE:
@@ -177,7 +179,7 @@ template <class Ptype>void parser::atom(double &result){
             get_token();
             return;
         case NUMBER:
-            result = atof(token);
+            result = (Ptype) atof(token);
             get_token();
             return;
         default:
@@ -220,6 +222,10 @@ template <class Ptype> void parser<Ptype>::get_token(){
 
         // advance to next char
         *temp++ = *exp_ptr++;
+    }
+    else if (isalpha(*exp_ptr)){
+        while(!isdelim(*exp_ptr)) *temp++ = *exp_ptr++;
+        tok_type = VARIABLE;
     }
     else if(isdigit(*exp_ptr)){
         while(!isdelim(*exp_ptr)) *temp++ = *exp_ptr++;
