@@ -1,0 +1,10 @@
+# Hello From Asciidoc
+I am  a paragraph in asciidoc
+
+Roses are red, +
+violets are blue.
+
+[%hardbreaks]
+A ruby is red.
+Java is black.
+
