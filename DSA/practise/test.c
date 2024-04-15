@@ -6,14 +6,10 @@
 // Error in both c89 and c99
 int main(){
     
-
-    int z =10;
-    if (z == 1){
-        printf("Yes It works\n");
-    }
-    else if(z == 10){
-        printf("No it won't\n");
-    }
+    int a[1] ={10}; 
+    int b;
+    scanf("%d",&b);
+    printf("%d",a[b]);
 
     return 0;
 }
