@@ -1,15 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-// This program will 
-// Make error since I am not allowed 
-// To take register addresses in c
-// Error in both c89 and c99
-int main(){
-    
-    int a[1] ={10}; 
-    int b;
-    scanf("%d",&b);
-    printf("%d",a[b]);
 
+struct ListNode
+{
+    int data;
+    struct ListNode *next ;
+};
+
+struct ListNode* createList(){
+    struct ListNode *Temp = (struct ListNode *) malloc(sizeof(struct ListNode));
+    Temp->data = 0;
+    Temp->next = NULL;
+    return Temp;
+}
+
+void addNode(struct ListNode *HEAD,int n){
+    struct ListNode *Temp = HEAD;
+    while(Temp->next!= NULL){
+        Temp = Temp->next;
+    }
+    
+    Temp->next = (struct ListNode *) malloc(sizeof(struct ListNode));
+    Temp->next->next = NULL;
+    Temp->next->data = n;
+    return ;
+
+}
+
+int main(){
+    // Make a node
+    struct ListNode *HEAD = createList();
+    addNode(HEAD,10);
+    printf("%d",HEAD->next->data);
     return 0;
 }
