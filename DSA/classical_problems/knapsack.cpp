@@ -35,7 +35,5 @@ int main(int argc, char *argv[]){
 
     cout<< knapSack(W,weight,profit,n);
 
-
-    
     return 0;
 }
