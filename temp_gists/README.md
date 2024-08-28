@@ -13,7 +13,7 @@
 
 * Satyam Dubey still faced issue even though applied earlier 
 
-![Diagram](https://raw.githubusercontent.com/rstar24/playground/main/img/satyam-stat.png)
+![Diagram](https://raw.githubusercontent.com/rstar24/playground/main/img/satyam.jpg)
 
 * Priyanshi Patidar who applied recently but she did not faced any issue
 
