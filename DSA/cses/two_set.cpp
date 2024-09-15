@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+typedef long long ll;
+
 // Function to generate all combinations of size r from n elements
-void generateCombinations(int n, int r,vector<vector<int>> &combi ) {
+void generateCombinations(ll n, ll r,vector<vector<ll>> &combi ) {
     // Vector to store the current combination
-    std::vector<int> combination(r);
+    std::vector<ll> combination(r);
     
     // Initialize the first combination
     for (int i = 0; i < r; ++i) {
@@ -44,14 +46,14 @@ void generateCombinations(int n, int r,vector<vector<int>> &combi ) {
 }
 
 
-void result(int x){
+void result(ll x){
     // check if sum is divisible by 2 or not 
-    int sum = (x*(x+1))/2 ;
+    ll sum = (x*(x+1))/2 ;
 
     if (sum % 2 == 0){
         cout << "YES" << endl;
-        int t1 = (x/2) + 1;
-        vector<vector<int>> combi;
+        ll t1 = (x/2) ;
+        vector<vector<ll>> combi;
         generateCombinations(x,t1,combi);
         int k ;
         for(int i = 0 ; i < combi.size();i++){
@@ -60,8 +62,8 @@ void result(int x){
                 k = i;
             }
         }
-        vector<int> s1;
-        vector<int> s2;
+        vector<ll> s1;
+        vector<ll> s2;
 
         for (const auto x: combi[k]){
             s1.push_back(x);
@@ -96,7 +98,7 @@ void result(int x){
 
 
 int main(){
-    int a;
+    ll a;
 
     cin >>a ;
     result(a);
