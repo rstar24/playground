@@ -30,24 +30,14 @@ int main(){
     int b = 2;
     int aux = 3;    
 
-    ofstream f1;
-    f1.open("output.txt",'w');
+    ofstream f1("output.txt");
 
-    if (!f1){
-        cerr << "Error opening the file\n" ;
-        return 1;
-    }
-
-    
-
-
-    // cout<< TOH(n,a,b,aux)<< endl;
-
+    f1 << TOH(n,a,b,aux) << "\n";
     for (auto x : moves){
-        fwrite(f1, x.first,' ', x.second ,'\n');
+        f1 << x.first << " " << x.second << "\n";
     }
-    
-    fclose(f1);
+
+    f1.close();
 
     return 0 ;
 }
