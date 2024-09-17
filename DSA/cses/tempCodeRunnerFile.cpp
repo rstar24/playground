@@ -1,1 +1,3 @@
-000000000000000000
+for (auto x : moves){
+    //     cout << x.first << " " << x.second << endl;
+    // }
