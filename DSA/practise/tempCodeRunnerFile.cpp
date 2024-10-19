@@ -1,2 +1,3 @@
-_with_stdio(false);
-    // cin.tie(NULL);
+*x ,int *y){ 
+//     int temp =
+// }
