@@ -1,50 +1,85 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void swap(int *a,int *b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
+// declaration
+void myQuickSort(vector<int> &arr,int p,int q);
 
-int partition(int arr[],int low,int high){
-    int pivot = arr[high];
-    int i = (low-1);
+void partition(vector<int> &arr);
 
-    for (int j = low ; j <= high-1 ; j++){
-        if (arr[j] < pivot){
-            i++;
-            swap(arr[i],arr[j]);
-        }
+void mySwap(vector<int> &arr,int a ,int b);
+
+int main(){
+    // This is the vector that has
+    // to be sort sorted using the 
+    // quick sort algorithm
+    vector<int> arr = {65,70,75,80,85,60,55,50,45};
+    int sz = arr.size();
+
+    cout << "Before sorting "<< endl;
+    for(auto x: arr){
+        cout << x << " ";
     }
-    swap(&arr[i+1],&arr[high]);
-    return (i + 1 );
-}
+    cout<< endl;
+    cout<< endl;
 
-void quicksort(int arr[],int low,int high){
-    if (low < high){
-        int pi = partition(arr,low,high);
+    myQuickSort(arr,0,sz-1);
 
-        quicksort(arr,low,pi-1);
-        quicksort(arr,pi+1,high);
+
+    cout<< endl;
+    cout << "After sorting "<< endl;
+    for(auto x: arr){
+        cout << x << " ";
     }
-}
-
-int main(int argc, char *argv[]){
-    int arr[] = {10,7,8,9,1,5};
-    int n = sizeof(arr)/sizeof(arr[0]);
-
-    cout << "Unsorted array : "<<endl;
-    for (int i = 0 ; i < n ; i++){
-        cout << arr[i] << " ";
-    }
-
-    quicksort(arr,0,n-1);
-
-    cout << "\nSorted array : "<<endl;
-    for (int i = 0 ; i < n ; i++){
-        cout << arr[i] << " ";
-    }
+    cout<< endl;
 
     return 0;
+}
+
+void mySwap(vector<int> &arr,int a ,int b){
+    int c = arr[a] ;
+    arr[a] = arr[b];
+    arr[b] = c;
+}
+
+int partition(vector<int> &arr, int m ,int p){
+
+    int v = arr[m];
+    int i = m+1;
+    int j = p;
+
+    while(true){
+        while (i <= p && arr[i] <= v) i++;
+        while (j >= m && arr[j] > v) j--;
+
+        if (i >= j) break;
+        mySwap(arr,i,j);
+        cout << "Small swaps"<< endl;
+        for(auto x: arr){
+            cout << x << " ";
+        }
+    cout<< endl;
+        
+    }
+
+    cout << "Pivot is Here" << endl;
+    mySwap(arr,m,j);
+    cout << "Step"<< endl;
+    for(auto x: arr){
+        cout << x << " ";
+    }
+    cout<< endl;
+
+    return j;
+}
+
+// Defination
+void myQuickSort(vector<int> &arr,int p,int q){
+
+    if (p<q) {
+        int j = partition(arr,p,q);
+        myQuickSort(arr,p,j-1);
+        myQuickSort(arr,j+1,q);
+    }
+
+    return ;
 }
