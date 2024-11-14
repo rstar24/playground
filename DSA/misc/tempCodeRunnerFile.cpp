@@ -1,14 +1,6 @@
-
-    // ofstream myfile("test_file.txt");
-    // if(!myfile){
-    //     cerr << "Error openin file for writing" << endl;
-    //     return 1;
+while(cin >> x ){
+    //     // cin >> y ;
+    //     // cin >> aa;
+    //     // cin >> bb;
+    //     table.push_back(make_pair(make_pair(x,y),make_pair(aa,bb)));
     // }
-
-    // for (long long int i = 0; i < 1000000; i++){
-    //     myfile <<  i << "^2 = "<<i*i << endl;
-    // }
-
-    // myfile.close();
-
-    // auto end = chrono::high_resolution_clock::now();
