@@ -1,0 +1,12 @@
+# This file is used internally by FFMPEG.
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/1185818338_2430104756_223132457.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2834709167_2232788370.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2579091473_4024570076.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2834709167_3878683308.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_1778817190_4087419933.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_1382666100_4125880979.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2834709167_1302269568.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_3373104787_1275511321.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2834709167_627845805.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2819273480_1661416746.mp4'
+file 'file:E:/playground/python/manimations/media/videos/main/480p15/partial_movie_files/intro/624642324_2834709167_2154114795.mp4'
