@@ -2,23 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "name": "Debug C++",
+      "type": "codelldb",
       "request": "launch",
-      "args": [],
-      "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "e:/playground/DSA/old_progs/cdc",
-      "program": "e:/playground/DSA/old_progs/cdc/build/Debug/outDebug",
-      "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
+      "program": "${workspaceFolder}/simple.out",
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

@@ -2,11 +2,10 @@
 using namespace std;
 
 int main(){
-    cout<<"Rishabh Rathore"<<endl;
-    cout<<"Rishabh Rathore"<<endl;
-    cout<<"Rishabh Rathore"<<endl;
-    cout<<"Rishabh Rathore"<<endl;
-    cout<<"Rishabh Rathore"<<endl;
-    cout<<"Rishabh Rathore"<<endl;
+  cout << "Hello world" << endl;
+  cout << "Hello world" << endl;
+  cout << "Hello world" << endl;
+  cout << "Hello world" << endl;
+  cout << "Hello world" << endl;
     return 0;
 }

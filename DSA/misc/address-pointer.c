@@ -21,9 +21,5 @@ int main(){
     printf("***a + 1 = %u\n",***a + 1);
     printf("*a[0] + 1 = %u\n",*a[0] + 1);
     printf("**a[0] + 1 = %u\n",**a[0] + 1);
-
-    
-    
-
     return 0;
 }

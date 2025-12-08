@@ -9,16 +9,14 @@ int main() {
     printf("This is Done through lua scripting\n");
     printf("This is Done through lua scripting\n");
     printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    printf("This is Done through lua scripting\n");
-    pspd
-    
 
-    
+    printf("This is Done through lua scripting\n");
+    printf("This is Done through lua scripting\n");
+    printf("This is Done through lua scripting\n");
+
+    printf("This is Done through lua scripting\n");
+
+    return 0;
 }
+
 
