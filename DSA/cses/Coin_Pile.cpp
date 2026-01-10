@@ -1,62 +1,40 @@
+#ifdef ONPC
+#define _GLIBCXX_DEBUG
+#endif
 #include <bits/stdc++.h>
+#define sz(a) ((int)((a).size()))
+#define char unsigned char
+
 using namespace std;
+// mt19937 rnd(239);
+mt19937 rnd(chrono::steady_clock::now().time_since_epoch().count());
 
-int main(int argc, char const *argv[])
-{
-    int n ; 
-    cin >> n ;
+typedef long long ll;
+typedef long double ld;
 
+void checkPile(int x, int y) {
+  if ((x + y) % 3 == 0 && 2 * x >= y && 2 * y >= x) {
+    cout << "YES" << endl;
+  } else {
+    cout << "NO" << endl;
+  }
+}
 
-    pair<int,int> dp[n];
-    for (int i = 0 ; i < n ; i++){
-        cin >> dp[i].first >> dp[i].second ;
-    }
+int32_t main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-    for (auto x : dp ){
-        int a = x.first ;
-        int b = x.second ;
+  int n;
+  cin >> n;
 
-        if ( (a/2) > b || (b/2) > a ){
-            cout << "NO" << endl ;
-            continue;
-        }
+  for (int i = 0; i < n; i++) {
+    int x, y;
+    cin >> x >> y;
+    checkPile(x, y);
+  }
 
-       while ( a != -1 && b != -1 ){
-            if (a == 0 && b == 0 ){
-                cout << "YES" << endl ;
-                break;
-            }
-            if (a == 2 && b == 1 ){
-                cout << "YES" << endl ;
-                break;
-
-            }
-            if (a == 2 && b == 2 ){
-                cout << "NO" << endl ;
-                break;
-            }
-
-            if (a == 1 && b == 2 ){
-                cout << "YES" << endl ;
-                break;
-            }
-
-            if (a == 1 && b == 1 ){
-                cout << "NO" << endl ;
-                break;
-            }
-            if ( a >= b ){
-                --a;
-                --a;
-                --b;
-            }
-            else if (b >= a) {
-                --b;
-                --b;
-                --a;
-            }
-        }    
-    }
-
-    return 0;
+#ifdef ONPC
+  cerr << endl
+       << "finished in " << clock() * 1.0 / CLOCKS_PER_SEC << " sec" << endl;
+#endif
 }
