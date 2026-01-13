@@ -1,42 +1,32 @@
+#include <algorithm>
 #include <bits/stdc++.h>
+#include <cstdlib>
 using namespace std;
 
-class vector 
-{
-    public:
-        int *arr;
-        int size;
-        vector(int n){
-            size = n;
-            arr = new int[size];
-        }
-
-        int dotProduct(vector &v){
-            int d = 0 ;
-            for (int i = 0 ; i <size; i++){
-                d += this->arr[i] * v.arr[i];
-                
-            }
-            return d;
-        }
-};
 
 int main(){
     // ios_base::sync_with_stdio(false);
     // cin.tie(NULL);
+
+    vector<int> vec1;
+    for (int i = 0 ; i < 10 ; i++) {
+    vec1.push_back(i);
+    }
+
+    random_shuffle(vec1.begin(),vec1.end());
+
+
+    for (auto x : vec1) {
+    cout<< x << " ";
+    }
+
+    printf("\n");
     
-    vector v1(3);
-    v1.arr[0] = 1 ;
-    v1.arr[1] = 12 ;
-    v1.arr[2] = 13 ;
 
-    vector v2(3);
-    v2.arr[0] = 1 ;
-    v2.arr[1] = 2 ;
-    v2.arr[2] = 2 ;
+    sort(vec1.rbegin(),vec1.rend());
 
-    int x = v1.dotProduct(v2);
-    cout << x << endl;
-
+    for (auto x : vec1) {
+    cout<< x << " ";
+    }
     return 0 ;
 }
