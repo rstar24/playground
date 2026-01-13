@@ -4,4 +4,4 @@
 .class
 .pdb
 .out
-/zig/zigling/.zigcache
+/zig/zigling/.zig-cache
