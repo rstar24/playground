@@ -36,12 +36,14 @@ const Character = struct {
     role: Role,
     gold: u32,
     experience: u32,
+    health: u8
 };
 
 pub fn main() void {
     // Please initialize Glorp with 100 health.
     var glorp_the_wise = Character{
         .role = Role.wizard,
+        .health = 100,
         .gold = 20,
         .experience = 10,
     };
@@ -51,6 +53,7 @@ pub fn main() void {
 
     // Ouch! Glorp takes a punch!
     glorp_the_wise.health -= 10;
+
 
     std.debug.print("Your wizard has {} health and {} gold.\n", .{
         glorp_the_wise.health,
