@@ -1,0 +1,5 @@
+print( "".join(sorted("".join(str(input()).split(' ')))))
+print("ble ble 🚅")
+print("ble ble 🚅")
+print("ble ble 🚅")
+print("ble ble 🚅")
